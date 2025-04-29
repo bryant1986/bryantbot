@@ -4,7 +4,7 @@ const { Client, middleware } = require('@line/bot-sdk');
 const axios = require('axios');
 
 const app = express();
-
+app.use(express.json());
 const config = {
   channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN,
   channelSecret: process.env.LINE_CHANNEL_SECRET
